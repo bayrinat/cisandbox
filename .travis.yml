@@ -1,12 +1,9 @@
 language: go
-sudo: false
 
-matrix:
-  include:
-    - go: 1.5
-    - go: 1.6
-    - go: 1.7
+go:
+  - 1.x
+  - 1.6
+  - 1.7.x
 
 script:
-  - go get -t -v ./...
   - go test -v -race ./...
